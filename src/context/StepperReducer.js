@@ -7,3 +7,16 @@ export const stepperInitialState =  {
         'Firma notario',
     ],
 }
+
+export function stepperReducer(state, action) {
+    switch (action.type) {
+        case 'NEXT' : {
+            const nextIndex = state.current + 1;
+            return {
+                ...state,
+                current: nextIndex < state.steps.length ?  nextIndex : state.current,
+            };
+        }
+        
+    }
+}
