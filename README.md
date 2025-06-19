@@ -1,25 +1,67 @@
-# Primer Proyecto de React
+# Prueba Técnica Heredamos - Componente de Flujo de Pasos (React)
 
-## Ejercicio 1: Componente de Bienvenida Personalizada
+## Descripción
 
-### Objetivo
-Crear un componente que salude al usuario por su nombre.
+Imagina que estamos construyendo un portal para familias que gestionan herencias. Parte del proceso incluye seguir una serie de pasos como:
 
-### Instrucciones
-1. En la página principal, crear un componente `WelcomeMessage` que acepte un prop `name`.
-2. Mostrar un mensaje como:  
-   **"Bienvenido a la misión, [nombre]"**.
-3. Utilizar el componente pasando diferentes nombres como props.
+- Subida de documentos  
+- Revisión legal  
+- Firma  
+- Otros pasos que consideres necesarios  
+
+El objetivo de esta prueba técnica es crear un **componente en React** que represente ese flujo de pasos, permitiendo ver en qué estado está cada uno (hecho, actual, pendiente) y poder cambiar de paso según se avance en el proceso.
 
 ---
 
-## Ejercicio 2: Lista de Tareas de la Misión
+## Requisitos
 
-### Objetivo
-Implementar una lista simple de tareas utilizando estado local.
+### Funcionalidad básica
 
-### Instrucciones
-1. Crear un componente `TaskList` que tenga un estado inicial con algunas tareas predeterminadas.
-2. Crear un componente `Task` para mostrar cada una de las tareas.
-3. Mostrar las tareas en una lista ordenada.
-4. Añadir funcionalidad para marcar tareas como completadas cambiando su estilo (por ejemplo, tachando el texto).
+- Representar visualmente el flujo de pasos.
+- Mostrar el estado de cada paso:
+  - ✅ Hecho
+  - 🔵 Actual
+  - ⏳ Pendiente
+- Permitir cambiar de paso (manualmente o automáticamente).
+
+### Opcional / sugerencias
+
+- Hacer que los pasos posteriores no sean seleccionables si los anteriores no se han completado.
+- Usar diseño horizontal, vertical, con barra de progreso, iconos, colores, etc.
+- Decidir libremente cómo gestionar el estado del componente (con `useState`, `props`, almacenamiento, etc.).
+- Utilizar cualquier herramienta o librería que consideres útil.
+
+---
+
+## Objetivo
+
+No se busca una solución perfecta o completamente pulida. El propósito es **evaluar tu planteamiento de solución, organización del código y las decisiones técnicas que tomas**.
+
+---
+
+## Tecnología
+
+- **React**
+  - Puedes usar hooks (`useState`, `useEffect`, etc.)
+  - Estilado libre (CSS, Tailwind, Styled Components, etc.)
+  - Uso de librerías externas permitido (como Material UI, Zustand, React Router, etc.)
+
+---
+
+## Entregable
+
+- Repositorio público en **GitHub** con el código fuente del componente.
+
+---
+
+## Tiempo estimado
+
+⏱️ **30 a 60 minutos**
+
+---
+
+## Fecha límite
+
+📅 **Viernes 20 de junio, a las 11:00h**
+
+---
