@@ -30,4 +30,30 @@ export default function Stepper() {
             setShowModal(true);
         }
     }
+
+    return (
+        <div>
+            {steps.map((label, index) => (
+                <StepButton
+                    key={label}
+                    label= {label}
+                    index = {index}
+                    current = {isFinished ? steps.length : current}
+                    onClick={goToStep}
+                />
+            ))}
+            <StepControls 
+                onNext= {handleNext}
+                onPrev={prevStep}
+                onlyBack={isFinished}
+                isLastStep= {current == steps.length - 1}
+            />
+
+            <CompletionModal
+                isOpen = {showModal}
+                onClose = {navigateToHome}
+                onRestart={handleRestart}
+            /> 
+        </div>
+    )
 }
