@@ -35,5 +35,7 @@ export function stepperReducer(state, action) {
                 ...state,
                 current: 0
             }
+        default:
+            return state
     }
 }
