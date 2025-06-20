@@ -30,5 +30,10 @@ export function stepperReducer(state, action) {
                 ...state,
                 current: action.payload.index <= state.current ? action.payload.index : state.current,
             };
+        case 'RESET':
+            return {
+                ...state,
+                current: 0
+            }
     }
 }
