@@ -22,4 +22,40 @@ export default function HerenciaPage() {
         }
     }, []);
 
+    return (
+        <main>
+            <Card>
+                <CardHeader>
+                    <Typography>
+                        Gestión de Herencia
+                    </Typography>
+                    <Typography>
+                        Sigue los pasos para completar el proceso legal de forma segura.
+                    </Typography>
+                </CardHeader>
+                <CardBody>
+                    <div>
+                        {/* Índice visual de Pasos Realizados- izquierda */}
+                        <div>
+                            {steps.map((label, index) => (
+                                <Typography
+                                    key= {label}
+                                    variant= 'small'
+                                
+                                >
+                                    {index === current ? '→ ' : ''}
+                                    {label}
+                                </Typography>
+                            ))}
+                        </div>
+                        {/* Flujo de Pasos- Derecha*/}
+                        <div className="col-span-1 md:col-span-3">
+                        <Stepper />
+                        </div>
+                    </div>
+                </CardBody>
+            </Card>
+        </main>
+    )
+
 }
