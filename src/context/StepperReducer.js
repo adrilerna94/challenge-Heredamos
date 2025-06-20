@@ -17,6 +17,14 @@ export function stepperReducer(state, action) {
                 current: nextIndex < state.steps.length ?  nextIndex : state.current,
             };
         }
+        case 'PREV': {
+            const prevIndex = state.current - 1;
+            return {
+                ...state,
+                current: prevIndex >= 0 ? prevIndex : state.current,
+            }
+        }
+
         
     }
 }
