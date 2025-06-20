@@ -6,7 +6,8 @@ import {
     DialogBody,
     DialogFooter,
     Button,
-    Card, 
+    Card,
+    CardHeader,
     CardBody, 
     Typography
 } from "@material-tailwind/react";
@@ -17,7 +18,8 @@ export {
     DialogBody,
     DialogFooter,
     Button,
-    Card, 
+    Card,
+    CardHeader,
     CardBody, 
     Typography
 };
