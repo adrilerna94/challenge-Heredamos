@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { CheckCircle, checkCircle, Circle, PlayCircle } from 'lucide-react';
+import { CheckCircle, Circle, PlayCircle } from 'lucide-react';
 
 export default function StepButton({ label, index, current, onClick }) {
     // variables para manejar los iconos que representan los estados (hecho, activo, pendiente)
