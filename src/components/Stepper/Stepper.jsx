@@ -46,7 +46,8 @@ export default function Stepper() {
                 onNext= {handleNext}
                 onPrev={prevStep}
                 onlyBack={isFinished}
-                isLastStep= {current == steps.length - 1}
+                isLastStep= {current === steps.length - 1}
+                isFirstStep= {current === 0 }
             />
 
             <SuccessModal
