@@ -32,7 +32,7 @@ export default function Stepper() {
     }
 
     return (
-        <div>
+        <div className="flex flex-col items-start gap-6 w-64 mx-auto">
             {steps.map((label, index) => (
                 <StepButton
                     key={label}
