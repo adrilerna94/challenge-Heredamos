@@ -25,6 +25,10 @@ export function stepperReducer(state, action) {
             }
         }
 
-        
+        case 'SET':
+            return {
+                ...state,
+                current: action.payload.index <= state.current ? action.payload.index : state.current,
+            };
     }
 }
