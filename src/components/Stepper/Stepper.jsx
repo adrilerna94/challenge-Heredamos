@@ -1,6 +1,6 @@
 'use client'
 
-import CompletionModal from '../Modals/CompletionModal'
+import SuccessModal from '../Modals/SucessModal'
 import { useState } from 'react'
 import { useStepper } from '@/context/StepperContext';
 import StepButton from './StepButton';
@@ -49,7 +49,7 @@ export default function Stepper() {
                 isLastStep= {current == steps.length - 1}
             />
 
-            <CompletionModal
+            <SuccessModal
                 isOpen = {showModal}
                 onClose = {navigateToHome}
                 onRestart={handleRestart}
