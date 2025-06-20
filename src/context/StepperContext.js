@@ -7,15 +7,8 @@ const StepperContext = createContext();
 export const StepperProvider = ({ children }) => {
     const [state, dispatch] = useReducer(stepperReducer, stepperInitialState);
 
-    const nextStep = () => {
-        if (state.current < state.steps.length - 1){
-            dispatch({type: 'NEXT'})
-        } else {
-            setShowModal(true);
-        }
-    }
-
-    const prevStep = () => dispatch({ type: 'PREV '});
+    const nextStep = () => dispatch({ type: 'NEXT' });
+    const prevStep = () => dispatch({ type: 'PREV'});
     const goToStep = (index) => dispatch({ type: 'SET' , payload: { index } });
     const reset = () => dispatch({ type: 'RESET' });
 
